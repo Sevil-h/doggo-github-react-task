@@ -3,6 +3,7 @@ import { NavBar } from "./components";
 import { HOME_SCREEN, STARED_REPOS_SCREEN } from "./constants/navigations";
 import { HomeScreen, StaredReposScreen } from "./screens";
 import FetchingGHProfile from "./fetch/FetchingGHProfile";
+import FetchingGHRepos from "./fetch/FetchingGHRepos";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <NavBar />
 
         <FetchingGHProfile />
+        <FetchingGHRepos />
         <Switch>
           <Route exact path={`${STARED_REPOS_SCREEN}`}>
             <StaredReposScreen />

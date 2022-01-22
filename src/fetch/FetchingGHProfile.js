@@ -22,7 +22,7 @@ function FetchingGHProfile() {
   return (
     <div>
       <div>
-        <img src={profile.avatar_url} />
+        <img src={profile.avatar_url} alt="profile" />
       </div>
       <div>
         <h2>name: {profile.name}</h2>
