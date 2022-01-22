@@ -2,7 +2,6 @@ import { createContext, useReducer, useEffect } from "react";
 import AppReducer from "./AppProducer";
 
 const initialState = {
-  allRepos: [],
   favorited: [],
 };
 
@@ -21,7 +20,6 @@ export const GlobalProvider = (props) => {
   return (
     <GlobalContext.Provider
       value={{
-        allrepos: state.allRepos,
         favorited: state.favorited,
         addToFavorite,
       }}

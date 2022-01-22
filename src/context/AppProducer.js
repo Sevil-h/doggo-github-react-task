@@ -4,7 +4,7 @@ export default (state, action) => {
     default:
       return {
         ...state.action,
-        allRepos: [action.payload, ...state.allRepos],
+        favorited: [action.payload, ...state.favorited],
       };
   }
 };
