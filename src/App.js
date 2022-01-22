@@ -4,15 +4,14 @@ import { HOME_SCREEN, STARED_REPOS_SCREEN } from "./constants/navigations";
 import { HomeScreen, StaredReposScreen } from "./screens";
 import FetchingGHProfile from "./fetch/FetchingGHProfile";
 import FetchingGHRepos from "./fetch/FetchingGHRepos";
-import Timeline from "./components/Timeline/VerticalTimeline";
 
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="container">
         <NavBar />
 
-        {/* <FetchingGHProfile /> */}
+        <FetchingGHProfile />
         <FetchingGHRepos />
         {/* <Switch>
           <Route exact path={`${STARED_REPOS_SCREEN}`}>
