@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Increment, Decrement } from "../../store/actions/counter.reducer";
-
 import "./style.css";
+import { FetchingGHProfile } from "../../fetch";
+import { FetchingGHRepos } from "../../fetch";
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -12,10 +13,12 @@ const HomeScreen = () => {
 
   return (
     <div>
-      <h1>{counterReducer.val}</h1>
+      <FetchingGHProfile />
+      <FetchingGHRepos />
+      {/* <h1>{counterReducer.val}</h1>
 
       <button onClick={decrement}>DECREMENT</button>
-      <button onClick={increment}>INCREMENT</button>
+      <button onClick={increment}>INCREMENT</button> */}
     </div>
   );
 };

@@ -1,10 +1,16 @@
 export default (state, action) => {
   switch (action.type) {
     case "ADD_TO_FAVORITE":
-    default:
       return {
-        ...state.action,
+        ...state,
         favorited: [action.payload, ...state.favorited],
       };
+    case "REMOVE_FROM_FAV":
+      return {
+        ...state,
+        favorited: state.favorited.filter((el) => el.id !== action.payload),
+      };
+    default:
+      return state;
   }
 };

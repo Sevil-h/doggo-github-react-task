@@ -8,7 +8,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import { useContext } from "react";
 
 function VerticalTimelineComp(props) {
-  const { addToFavorite, favorited } = useContext(GlobalContext);
+  const { addToFavorite, removeFromFav, favorited } = useContext(GlobalContext);
 
   return (
     <div>
@@ -16,6 +16,7 @@ function VerticalTimelineComp(props) {
         {props.repos.map((repo) => {
           let stored = favorited.find((o) => o.id === repo.id);
           const disable = stored ? true : false;
+
           return (
             <VerticalTimelineElement
               key={repo.id}
@@ -25,7 +26,7 @@ function VerticalTimelineComp(props) {
               <button
                 className="btn btn-primary"
                 disabled={disable}
-                onClick={() => addToFavorite(repo)}
+                onClick={() => (disable ? addToFavorite : removeFromFav)}
               >
                 <FaRegStar />
               </button>

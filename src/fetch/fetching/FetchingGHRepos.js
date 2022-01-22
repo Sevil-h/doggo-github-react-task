@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import VerticalTimelineComp from "../components/Timeline/VerticalTimelineComp";
+import VerticalTimelineComp from "../../components/Timeline/VerticalTimelineComp";
 
 // Fetching data from github repositories API with axios
 function FetchingGHRepos() {

@@ -11,7 +11,7 @@ function FetchingGHProfile() {
       .get(`https://api.github.com/users/Sevil-h`)
       .then((res) => {
         const data = res.data;
-        console.log(data);
+        // console.log(data);
         setProfile(data);
       })
       .catch((err) => {

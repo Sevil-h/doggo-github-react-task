@@ -23,11 +23,16 @@ export const GlobalProvider = (props) => {
     dispatch({ type: "ADD_TO_FAVORITE", payload: repo });
   };
 
+  const removeFromFav = (id) => {
+    dispatch({ type: "REMOVE_FROM_FAV", payload: id });
+  };
+
   return (
     <GlobalContext.Provider
       value={{
         favorited: state.favorited,
         addToFavorite,
+        removeFromFav,
       }}
     >
       {props.children}
