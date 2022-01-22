@@ -2,33 +2,28 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavBar } from "./components";
 import { HOME_SCREEN, STARED_REPOS_SCREEN } from "./constants/navigations";
 import { HomeScreen, StaredReposScreen } from "./screens";
-import React, { useState } from "react";
 
 const App = () => {
-  const [profil, setProfil] = useState([]);
-  const [repos, setRepos] = useState([]);
-
   function fetchGithubProfil(username) {
     fetch(`https://api.github.com/users/${username}`)
       .then((response) => response.json())
       .then((data) => {
-        setProfil(data);
-        // const name = data.name;
-        // const location = data.location;
-        // const company = data.company;
-        // const avatar = data.avatar_url;
-        // const repos = data.public_repos;
-        // const followers = data.followers;
-        // const following = data.following;
-        // console.log(
-        //   name,
-        //   location,
-        //   company,
-        //   avatar,
-        //   repos,
-        //   followers,
-        //   following
-        // );
+        const name = data.name;
+        const location = data.location;
+        const company = data.company;
+        const avatar = data.avatar_url;
+        const repos = data.public_repos;
+        const followers = data.followers;
+        const following = data.following;
+        console.log(
+          name,
+          location,
+          company,
+          avatar,
+          repos,
+          followers,
+          following
+        );
       });
   }
 
