@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Increment, Decrement } from "../../store/actions/counter.reducer";
-import "./style.css";
+import "./style.scss";
 import { FetchingGHProfile } from "../../fetch";
 import { FetchingGHRepos } from "../../fetch";
 

@@ -3,7 +3,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { FaRegStar } from "react-icons/fa";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import { GlobalContext } from "../../context/GlobalState";
 import { useContext } from "react";
 
@@ -26,7 +26,7 @@ function VerticalTimelineComp(props) {
               <button
                 className="btn btn-primary"
                 disabled={disable}
-                onClick={() => (disable ? addToFavorite : removeFromFav)}
+                onClick={() => (stored ? removeFromFav : addToFavorite)}
               >
                 <FaRegStar />
               </button>
