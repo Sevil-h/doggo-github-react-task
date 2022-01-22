@@ -13,7 +13,7 @@ const App = () => {
 
         <FetchingGHProfile />
         <FetchingGHRepos />
-        {/* <Switch>
+        <Switch>
           <Route exact path={`${STARED_REPOS_SCREEN}`}>
             <StaredReposScreen />
           </Route>
@@ -21,7 +21,7 @@ const App = () => {
           <Route exact path={`${HOME_SCREEN}`}>
             <HomeScreen />
           </Route>
-        </Switch> */}
+        </Switch>
       </div>
     </Router>
   );

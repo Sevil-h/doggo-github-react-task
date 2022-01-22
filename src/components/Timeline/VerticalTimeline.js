@@ -3,6 +3,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { FaRegStar } from "react-icons/fa";
 
 function Timeline(props) {
   return (
@@ -15,6 +16,7 @@ function Timeline(props) {
               date={repo.created_at}
               dateClassName="date"
             >
+              <FaRegStar />
               <h3 className="vertical-timeline-element-title">{repo.name}</h3>
               <h5 className="vertical-timeline-element-subtitle">
                 {repo.language}
