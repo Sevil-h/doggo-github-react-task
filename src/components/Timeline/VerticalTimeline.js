@@ -23,9 +23,12 @@ function Timeline(props) {
                 {repo.visibility}
               </h5>
               <div>
-                <button>
-                  <a href={repo.html_url} target="blank">
-                    {" "}
+                <button className="btn btn-light">
+                  <a
+                    href={repo.html_url}
+                    target="blank"
+                    className="link-warning"
+                  >
                     Visit repository
                   </a>
                 </button>
