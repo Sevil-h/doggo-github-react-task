@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Timeline from "../components/Timeline/VerticalTimeline";
+import VerticalTimelineComp from "../components/Timeline/VerticalTimelineComp";
 
 // Fetching data from github repositories API with axios
 function FetchingGHRepos() {
@@ -19,7 +19,7 @@ function FetchingGHRepos() {
         setRepos(data);
       })
       .catch((err) => {
-        // console.log(err);
+        console.log(err);
       });
   }, []);
 
@@ -35,7 +35,7 @@ function FetchingGHRepos() {
   return (
     <div>
       <h1>Repositories</h1>
-      <Timeline repos={repos} />
+      <VerticalTimelineComp repos={repos} />
     </div>
   );
 }

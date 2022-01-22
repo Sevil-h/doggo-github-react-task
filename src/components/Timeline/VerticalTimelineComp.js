@@ -5,7 +5,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { FaRegStar } from "react-icons/fa";
 
-function Timeline(props) {
+function VerticalTimelineComp(props) {
   return (
     <div>
       <VerticalTimeline>
@@ -43,4 +43,4 @@ function Timeline(props) {
   );
 }
 
-export default Timeline;
+export default VerticalTimelineComp;
