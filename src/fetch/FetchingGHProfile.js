@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-
 import React from "react";
 
+// Fetching data from github profile API with axios
 function FetchingGHProfile() {
   const [profile, setProfile] = useState([]);
 

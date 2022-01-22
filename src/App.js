@@ -4,6 +4,7 @@ import { HOME_SCREEN, STARED_REPOS_SCREEN } from "./constants/navigations";
 import { HomeScreen, StaredReposScreen } from "./screens";
 import FetchingGHProfile from "./fetch/FetchingGHProfile";
 import FetchingGHRepos from "./fetch/FetchingGHRepos";
+import Timeline from "./components/Timeline/VerticalTimeline";
 
 const App = () => {
   return (
@@ -11,9 +12,9 @@ const App = () => {
       <div>
         <NavBar />
 
-        <FetchingGHProfile />
+        {/* <FetchingGHProfile /> */}
         <FetchingGHRepos />
-        <Switch>
+        {/* <Switch>
           <Route exact path={`${STARED_REPOS_SCREEN}`}>
             <StaredReposScreen />
           </Route>
@@ -21,7 +22,7 @@ const App = () => {
           <Route exact path={`${HOME_SCREEN}`}>
             <HomeScreen />
           </Route>
-        </Switch>
+        </Switch> */}
       </div>
     </Router>
   );
