@@ -7,11 +7,12 @@ import { HOME_SCREEN, STARED_REPOS_SCREEN } from "./constants/navigations";
 import { HomeScreen, StaredReposScreen } from "./screens";
 import FetchingGHProfile from "./fetch/FetchingGHProfile";
 import FetchingGHRepos from "./fetch/FetchingGHRepos";
+import { GlobalProvider } from "./context/GlobalState";
 
 const App = () => {
   return (
-    <Router>
-      <Provider store={store}>
+    <GlobalProvider>
+      <Router>
         <div className="container">
           <NavBar />
 
@@ -27,8 +28,8 @@ const App = () => {
             </Route>
           </Switch>
         </div>
-      </Provider>
-    </Router>
+      </Router>
+    </GlobalProvider>
   );
 };
 
