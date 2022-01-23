@@ -9,7 +9,7 @@ const HomeScreen = () => {
   console.log(repos);
   return (
     <div className="container">
-      <h1>Stared Repos</h1>
+      <h1 className="title repo-card">Stared Repos</h1>
       <VerticalTimelineComp repos={repos} />
     </div>
   );
