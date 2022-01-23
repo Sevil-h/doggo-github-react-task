@@ -17,7 +17,6 @@ function VerticalTimelineComp(props) {
         {props.repos.map((repo) => {
           let stored = favorited.find((o) => o.id === repo.id);
           const disable = stored ? true : false;
-
           return (
             <VerticalTimelineElement
               key={repo.id}
@@ -28,7 +27,9 @@ function VerticalTimelineComp(props) {
               <button
                 className="btn fav-button"
                 disabled={disable}
-                onClick={() => (stored ? removeFromFav : addToFavorite)}
+                onClick={() =>
+                  disable ? removeFromFav(repo) : addToFavorite(repo)
+                }
               >
                 <span className="fav-button-icons">
                   <FaRegStar className="fav-button__icon" />
@@ -56,6 +57,19 @@ function VerticalTimelineComp(props) {
                   Visit repository
                 </a>
               </div>
+              {disable ? (
+                <button
+                  className="btn btn-remove"
+                  onClick={() => removeFromFav(repo.id)}
+                >
+                  <div className="btn-remove__items">
+                    <FaRegStar className="btn-remove__item btn-remove__icon" />
+                    <span className="btn-remove__item">remove</span>
+                  </div>
+                </button>
+              ) : (
+                <span></span>
+              )}
             </VerticalTimelineElement>
           );
         })}

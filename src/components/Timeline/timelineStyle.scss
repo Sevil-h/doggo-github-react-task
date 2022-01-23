@@ -12,6 +12,8 @@
 }
 // Buttons
 
+// Favorites Button
+
 .button-icons {
   position: relative;
 }
@@ -19,6 +21,10 @@
   position: absolute;
   top: 16px;
   right: 16px;
+
+  &:focus {
+    outline: none;
+  }
   &__icon {
     display: inline-block;
     position: absolute;
@@ -43,6 +49,7 @@
   &,
   &:link,
   &:visited {
+    outline: none;
     text-decoration: none;
     display: inline-block;
     border: none;
@@ -69,6 +76,8 @@
     }
   }
 }
+
+// Visit Repo Button
 .button-link {
   display: inline-block;
   text-decoration: none;
@@ -81,6 +90,7 @@
   transition: all 0.5s;
   overflow: hidden;
   margin-top: 8px;
+  outline: none;
 
   &::before {
     content: "";
@@ -102,4 +112,26 @@
     color: #f3f6f7 !important;
     z-index: 10;
   }
+}
+
+// Remove Button
+.btn-remove {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+
+  &__item:first-child {
+    margin-right: 3px;
+  }
+
+  &__item {
+    color: #fdc135;
+  }
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
 }
