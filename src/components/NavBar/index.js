@@ -1,17 +1,20 @@
-import { Link } from 'react-router-dom';
-import { HOME_SCREEN, STARED_REPOS_SCREEN } from '../../constants/navigations';
-
-import './style.css';
+import { Link } from "react-router-dom";
+import { HOME_SCREEN, STARED_REPOS_SCREEN } from "../../constants/navigations";
+import "../../styles/Navbar.scss";
 
 const HomeScreen = () => {
   return (
-    <nav className="NavBar">
-      <ul>
-        <li>
-          <Link to={`${HOME_SCREEN}`}>Home</Link>
+    <nav className="navbar">
+      <ul className="navbar_items">
+        <li className="navbar__item">
+          <Link to={`${HOME_SCREEN}`} className="navbar__link">
+            Home
+          </Link>
         </li>
-        <li>
-          <Link to={`${STARED_REPOS_SCREEN}`}>Stared repos</Link>
+        <li className="navbar__item">
+          <Link to={`${STARED_REPOS_SCREEN}`} className="navbar__link">
+            Stared repos
+          </Link>
         </li>
       </ul>
     </nav>

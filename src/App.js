@@ -1,14 +1,16 @@
+import { Provider } from "react-redux";
+import store from "./store";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavBar } from "./components";
 import { HOME_SCREEN, STARED_REPOS_SCREEN } from "./constants/navigations";
 import { HomeScreen, StaredReposScreen } from "./screens";
+import { GlobalProvider } from "./context/GlobalState";
 
 const App = () => {
   return (
-    <Router>
-      <div>
+    <GlobalProvider>
+      <Router>
         <NavBar />
-
         <Switch>
           <Route exact path={`${STARED_REPOS_SCREEN}`}>
             <StaredReposScreen />
@@ -18,8 +20,8 @@ const App = () => {
             <HomeScreen />
           </Route>
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </GlobalProvider>
   );
 };
 

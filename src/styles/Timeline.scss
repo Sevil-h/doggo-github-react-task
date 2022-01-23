@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+.vertical-timeline-element-content {
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.13) !important;
+  padding: 1rem 2rem !important;
+}
+.date {
+  color: $color-grey;
+}
+
+.vertical-timeline-element-description {
+  margin: 1.5em 0 2em 0;
+}
+.vertical-timeline-element-title {
+  color: $primary-color;
+  font-size: 28px;
+}
+.vertical-timeline-element-subtitle {
+  font-size: 16px;
+}
