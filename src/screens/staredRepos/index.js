@@ -8,7 +8,7 @@ const HomeScreen = () => {
   const repos = favorited;
   console.log(repos);
   return (
-    <div>
+    <div className="container">
       <h1>Stared Repos</h1>
       <VerticalTimelineComp repos={repos} />
     </div>

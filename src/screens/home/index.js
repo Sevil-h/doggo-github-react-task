@@ -12,9 +12,9 @@ const HomeScreen = () => {
   const decrement = () => dispatch(Decrement());
 
   return (
-    <div>
+    <div className="container">
       <FetchingGHProfile />
-      {/* <FetchingGHRepos /> */}
+      <FetchingGHRepos />
       {/* <h1>{counterReducer.val}</h1>
 
       <button onClick={decrement}>DECREMENT</button>

@@ -6,10 +6,11 @@ import "react-vertical-timeline-component/style.min.css";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { GlobalContext } from "../../context/GlobalState";
 import { useContext } from "react";
+import "./timelineStyle.scss";
 
 function VerticalTimelineComp(props) {
   const { addToFavorite, removeFromFav, favorited } = useContext(GlobalContext);
-
+  let iconStyle = { background: "#fdc135" };
   return (
     <div>
       <VerticalTimeline>
@@ -22,31 +23,38 @@ function VerticalTimelineComp(props) {
               key={repo.id}
               date={repo.created_at}
               dateClassName="date"
+              iconStyle={iconStyle}
             >
               <button
-                className="btn btn-primary"
+                className="btn fav-button"
                 disabled={disable}
                 onClick={() => (stored ? removeFromFav : addToFavorite)}
               >
-                <FaRegStar />
+                <span className="fav-button-icons">
+                  <FaRegStar className="fav-button__icon" />
+                  <FaStar
+                    className={
+                      disable
+                        ? "fav-button__iconOpacity"
+                        : "fav-button__iconfav"
+                    }
+                  />
+                </span>
               </button>
               <h3 className="vertical-timeline-element-title">{repo.name}</h3>
               <h5 className="vertical-timeline-element-subtitle">
                 {repo.language}
               </h5>
-              <h5 className="vertical-timeline-element-subtitle">
+              <div className="vertical-timeline-element-derscription">
+                <p>{repo.description}</p>
+              </div>
+              <p className="vertical-timeline-element-subtitle">
                 {repo.visibility}
-              </h5>
+              </p>
               <div>
-                <button className="btn btn-light">
-                  <a
-                    href={repo.html_url}
-                    target="blank"
-                    className="link-warning"
-                  >
-                    Visit repository
-                  </a>
-                </button>
+                <a href={repo.html_url} target="blank" className="button-link">
+                  Visit repository
+                </a>
               </div>
             </VerticalTimelineElement>
           );

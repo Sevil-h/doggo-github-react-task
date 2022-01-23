@@ -34,7 +34,6 @@ function FetchingGHRepos() {
 
   return (
     <div>
-      <h1>Repositories</h1>
       <VerticalTimelineComp repos={repos} />
     </div>
   );
