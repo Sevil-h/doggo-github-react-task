@@ -1,4 +1,4 @@
-import "./style.css";
+import "../../styles/RepoCard.scss";
 import { GlobalContext } from "../../context/GlobalState";
 import { useContext } from "react";
 import VerticalTimelineComp from "../../components/Timeline/VerticalTimelineComp";

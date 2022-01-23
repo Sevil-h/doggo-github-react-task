@@ -1,12 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Raleway:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap");
-
-$primary-color: #36bbe7;
-$primary-lg-color: #f3f6f7;
-// $primary-md-color: #406f7f;
-
-$color-white: #f3f6f7;
-$color-grey: #ccdbdc;
-$color-yellow: #fdc135;
+@import "styles/variables.scss";
 * {
   margin: auto;
   padding: 0;

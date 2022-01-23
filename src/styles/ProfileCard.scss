@@ -1,8 +1,10 @@
+@import "./variables.scss";
+
 .profile-card {
   min-height: 320px;
   margin: auto;
   box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
-  background-color: #f3f6f7;
+  background-color: $color-white;
   border-radius: 12px;
   max-width: 700px;
   position: relative;
@@ -22,7 +24,7 @@
     position: relative;
     z-index: 4;
     margin-top: -80px;
-    box-shadow: 0px 5px 40px 0px #f3f6f7, 0px 0px 0px 7px #36bbe7;
+    box-shadow: 0px 5px 40px 0px $color-white, 0px 0px 0px 7px $primary-color;
 
     @media screen and (max-width: 576px) {
       width: 120px;
@@ -46,14 +48,14 @@
   &__name {
     font-weight: 700;
     font-size: 24px;
-    color: #406f7f;
+    color: $primary-color;
     margin-bottom: 8px;
   }
 
   &__txt {
     font-size: 18px;
     font-weight: 500;
-    color: #324e63;
+    color: $primary-md-color;
     margin-bottom: 15px;
   }
 
@@ -66,7 +68,7 @@
     display: inline-flex;
     font-size: 27px;
     margin-right: 10px;
-    color: #fdc135;
+    color: $color-yellow;
   }
 
   &__info {
@@ -85,7 +87,7 @@
       font-family: inherit;
       font-weight: 700;
       font-size: 24px;
-      color: #324e63;
+      color: $primary-dr-color;
     }
   }
 }

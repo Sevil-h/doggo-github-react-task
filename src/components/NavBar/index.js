@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { HOME_SCREEN, STARED_REPOS_SCREEN } from "../../constants/navigations";
-import "./style.scss";
+import "../../styles/Navbar.scss";
 
 const HomeScreen = () => {
   return (

@@ -6,7 +6,8 @@ import "react-vertical-timeline-component/style.min.css";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { GlobalContext } from "../../context/GlobalState";
 import { useContext } from "react";
-import "./timelineStyle.scss";
+import "../../styles/Timeline.scss";
+import "../../styles/Button.scss";
 
 function VerticalTimelineComp(props) {
   const { addToFavorite, removeFromFav, favorited } = useContext(GlobalContext);
@@ -50,7 +51,7 @@ function VerticalTimelineComp(props) {
                 <p>{repo.description}</p>
               </div>
               <p className="vertical-timeline-element-subtitle">
-                {repo.visibility}
+                {repo.visibility} repository
               </p>
               <div>
                 <a href={repo.html_url} target="blank" className="button-link">

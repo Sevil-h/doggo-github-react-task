@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import React from "react";
-import "./profile.scss";
 import { FaMapMarkerAlt, FaBookOpen } from "react-icons/fa";
+import "../../styles/ProfileCard.scss";
+
 // Fetching data from github profile API with axios
 function FetchingGHProfile() {
   const [profile, setProfile] = useState([]);

@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Increment, Decrement } from "../../store/actions/counter.reducer";
-import "./style.scss";
 import { FetchingGHProfile } from "../../fetch";
 import { FetchingGHRepos } from "../../fetch";
 
@@ -13,7 +12,7 @@ const HomeScreen = () => {
 
   return (
     <div className="container">
-      <FetchingGHProfile className="u-margin-top" />
+      <FetchingGHProfile />
       <FetchingGHRepos />
       {/* <h1>{counterReducer.val}</h1>
 
