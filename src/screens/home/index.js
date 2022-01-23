@@ -14,7 +14,7 @@ const HomeScreen = () => {
   return (
     <div>
       <FetchingGHProfile />
-      <FetchingGHRepos />
+      {/* <FetchingGHRepos /> */}
       {/* <h1>{counterReducer.val}</h1>
 
       <button onClick={decrement}>DECREMENT</button>

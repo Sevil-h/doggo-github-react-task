@@ -1,6 +1,5 @@
 import { Provider } from "react-redux";
 import store from "./store";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavBar } from "./components";
 import { HOME_SCREEN, STARED_REPOS_SCREEN } from "./constants/navigations";

@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import React from "react";
-
+import "./profile.scss";
+import { FaMapMarkerAlt, FaBookOpen } from "react-icons/fa";
 // Fetching data from github profile API with axios
 function FetchingGHProfile() {
   const [profile, setProfile] = useState([]);
@@ -20,17 +21,40 @@ function FetchingGHProfile() {
   }, []);
 
   return (
-    <div>
-      <div>
-        <img src={profile.avatar_url} alt="profile" />
+    <div className="profile-card js-profile-cart">
+      <div className="profile-card__img-card">
+        <img
+          className="profile-card__img"
+          src={profile.avatar_url}
+          alt="profile card"
+        />
       </div>
-      <div>
-        <h2>name: {profile.name}</h2>
-        <p>folowers: {profile.followers}</p>
-        <p>following: {profile.following}</p>
-        <p>company: {profile.company}</p>
-        <p>location: {profile.location}</p>
-        <p>public repositoies: {profile.public_repos}</p>
+      <div className="profile-card__cnt">
+        <div className="profile-card__name">{profile.name}</div>
+        <div className="profile-card__loc">
+          <span>
+            <FaMapMarkerAlt className="profile-card__icon" />
+          </span>
+          <span className="profile-card__loc-text">
+            {!profile.company ? "Le wagon" : profile.company}
+          </span>
+        </div>
+        <div className="profile-card__info">
+          <div className="profile-card__info--item">
+            <div className="profile-card__info--title">{profile.following}</div>
+            <div>Following</div>
+          </div>
+          <div className="profile-card__info--item">
+            <div className="profile-card__info--title">{profile.followers}</div>
+            <div>Followers</div>
+          </div>
+          <div className="profile-card__info--item">
+            <div className="profile-card__info--title">
+              {profile.public_repos}
+            </div>
+            <div>Repositories</div>
+          </div>
+        </div>
       </div>
     </div>
   );
