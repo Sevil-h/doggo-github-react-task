@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { HOME_SCREEN, STARED_REPOS_SCREEN } from '../../constants/navigations';
+import { Link } from "react-router-dom";
+import { HOME_SCREEN, STARED_REPOS_SCREEN } from "../../constants/navigations";
 
-import './style.css';
+import "./style.css";
 
 const HomeScreen = () => {
   return (
@@ -10,7 +10,7 @@ const HomeScreen = () => {
         <li>
           <Link to={`${HOME_SCREEN}`}>Home</Link>
         </li>
-        <li>
+        <li className="NavBar__item">
           <Link to={`${STARED_REPOS_SCREEN}`}>Stared repos</Link>
         </li>
       </ul>

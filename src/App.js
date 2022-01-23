@@ -10,18 +10,16 @@ const App = () => {
   return (
     <GlobalProvider>
       <Router>
-        <div className="container">
-          <NavBar />
-          <Switch>
-            <Route exact path={`${STARED_REPOS_SCREEN}`}>
-              <StaredReposScreen />
-            </Route>
+        <NavBar />
+        <Switch>
+          <Route exact path={`${STARED_REPOS_SCREEN}`}>
+            <StaredReposScreen />
+          </Route>
 
-            <Route exact path={`${HOME_SCREEN}`}>
-              <HomeScreen />
-            </Route>
-          </Switch>
-        </div>
+          <Route exact path={`${HOME_SCREEN}`}>
+            <HomeScreen />
+          </Route>
+        </Switch>
       </Router>
     </GlobalProvider>
   );
