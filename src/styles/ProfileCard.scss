@@ -75,6 +75,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 24px;
+
     &--item {
       min-width: 150px;
 
@@ -89,5 +90,13 @@
       font-size: 24px;
       color: $primary-dr-color;
     }
+  }
+}
+
+// Media Queries
+
+@media (min-width: 100px) and (max-width: 572px) {
+  .profile-card__info {
+    grid-template-columns: 1fr;
   }
 }
