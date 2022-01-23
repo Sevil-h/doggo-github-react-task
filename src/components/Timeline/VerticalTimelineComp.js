@@ -56,19 +56,6 @@ function VerticalTimelineComp(props) {
                   Visit repository
                 </a>
               </div>
-              {disable ? (
-                <button
-                  className="btn btn-remove"
-                  onClick={() => removeFromFav(repo.id)}
-                >
-                  <div className="btn-remove__items">
-                    <FaRegStar className="btn-remove__item btn-remove__icon" />
-                    <span className="btn-remove__item">remove</span>
-                  </div>
-                </button>
-              ) : (
-                <span></span>
-              )}
             </VerticalTimelineElement>
           );
         })}
