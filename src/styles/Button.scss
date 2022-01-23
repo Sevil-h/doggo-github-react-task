@@ -11,9 +11,6 @@
   top: 16px;
   right: 16px;
 
-  &:focus {
-    outline: none;
-  }
   &__icon {
     display: inline-block;
     position: absolute;
@@ -21,24 +18,9 @@
     right: 8px;
   }
 
-  &__iconfav {
-    display: inline-block;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    opacity: 0;
-  }
-  &__iconOpacity {
-    display: inline-block;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    opacity: 1;
-  }
   &,
   &:link,
   &:visited {
-    outline: none;
     text-decoration: none;
     display: inline-block;
     border: none;
@@ -53,15 +35,6 @@
       transform: scale(1.3);
       display: inline-block;
       color: $color-yellow;
-      .fav-button__icon {
-        transform: scale(0);
-      }
-      .fav-button__iconfav {
-        opacity: 1;
-      }
-      .fav-button__iconOpacity {
-        opacity: 0;
-      }
     }
   }
 }
@@ -103,23 +76,7 @@
   }
 }
 
-// Remove Button
-.btn-remove {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-  background-color: transparent;
-  cursor: pointer;
-  display: inline-block;
-
-  &__item:first-child {
-    margin-right: 3px;
-  }
-
-  &__item {
-    color: $color-yellow;
-  }
-}
+// Remove focus effect
 .btn:focus {
   outline: none;
   box-shadow: none;
