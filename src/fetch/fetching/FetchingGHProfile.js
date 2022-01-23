@@ -35,9 +35,8 @@ function FetchingGHProfile() {
           <span>
             <FaMapMarkerAlt className="profile-card__icon" />
           </span>
-          <span className="profile-card__loc-text">
-            {!profile.company ? "Le wagon" : profile.company}
-          </span>
+          <span className="profile-card__loc-text">{profile.location}</span>
+          <p> {!profile.company ? "Le wagon" : profile.company}</p>
         </div>
         <div className="profile-card__info">
           <div className="profile-card__info--item">
