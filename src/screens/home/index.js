@@ -13,7 +13,7 @@ const HomeScreen = () => {
 
   return (
     <div className="container">
-      <FetchingGHProfile />
+      <FetchingGHProfile className="u-margin-top" />
       <FetchingGHRepos />
       {/* <h1>{counterReducer.val}</h1>
 

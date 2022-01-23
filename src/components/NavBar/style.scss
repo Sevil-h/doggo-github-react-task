@@ -1,0 +1,37 @@
+// nav > ul {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// nav > ul > li {
+//   margin-right: 30px;
+// }
+.navbar {
+  background-color: #fdc135;
+  color: #f3f6f7;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  height: 100px;
+  width: 100px;
+  border-bottom-left-radius: 50%;
+  &__items {
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s;
+    &:hover {
+      color: inherit;
+      opacity: 0.7;
+    }
+  }
+}
