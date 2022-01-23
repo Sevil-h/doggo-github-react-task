@@ -25,24 +25,22 @@ function VerticalTimelineComp(props) {
               dateClassName="date"
               iconStyle={iconStyle}
             >
-              <button
-                className="btn fav-button"
-                disabled={disable}
-                onClick={() =>
-                  disable ? removeFromFav(repo) : addToFavorite(repo)
-                }
-              >
-                <span className="fav-button-icons">
-                  <FaRegStar className="fav-button__icon" />
-                  <FaStar
-                    className={
-                      disable
-                        ? "fav-button__iconOpacity"
-                        : "fav-button__iconfav"
-                    }
-                  />
-                </span>
-              </button>
+              {!disable ? (
+                <button
+                  className="btn fav-button"
+                  disabled={disable}
+                  onClick={() => addToFavorite(repo)}
+                >
+                  <FaRegStar className="fav-button-icons" />
+                </button>
+              ) : (
+                <button
+                  className="btn fav-button"
+                  onClick={() => removeFromFav(repo.id)}
+                >
+                  <FaStar className="fav-button-icons" />
+                </button>
+              )}
               <h3 className="vertical-timeline-element-title">{repo.name}</h3>
               <h5 className="vertical-timeline-element-subtitle">
                 {repo.language}
